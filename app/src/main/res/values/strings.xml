@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">ApplicationUpdater</string>
+
+    <string name="onUpdateTitle">Une mise à jour est disponible</string>
+    <string name="onUpdateMessage">Merci de faire la mise à jour dès que possible.</string>
+    <string name="onUpdateBtnUpdate">Mettre à jour</string>
+    <string name="onUpdateBtnDismiss">Pas maintenant</string>
+</resources>
