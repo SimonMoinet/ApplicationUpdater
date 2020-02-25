@@ -56,16 +56,16 @@ public class ApplicationUpdater {
     //
     // ----------------------------------------------------------------
 
-    public void start()
+    public ApplicationUpdater start()
     {
         if(!VolleyConnection.getInstance(context.getApplicationContext()).isNetworkAvailable()) {
             error("Erreur", "Aucune connection à internet n'est disponible pour le moment");
-            return;
+            return this;
         }
 
         if(!isUrlValid()) {
             error("Erreur", "L'url qui pointe vers le fichier json de version n'est pas valide.");
-            return;
+            return this;
         }
 
         GsonRequest gsonRequest = new GsonRequest<Package>(this.url, Package.class, null, new Response.Listener<Package>() {
@@ -83,6 +83,8 @@ public class ApplicationUpdater {
         });
 
         VolleyConnection.getInstance(this.context.getApplicationContext()).addToRequestQueue(gsonRequest);
+
+        return this;
     }
 
     public void update(Package latest) {

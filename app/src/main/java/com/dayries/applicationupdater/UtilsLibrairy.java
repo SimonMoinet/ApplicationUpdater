@@ -14,7 +14,7 @@ public class UtilsLibrairy {
 
     public static Uri uriFromFile(Context context, File file) {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
-            return FileProvider.getUriForFile(context, BuildConfig.APPLICATION_ID + ".provider", file);
+            return FileProvider.getUriForFile(context, "com.dayries.applicationupdater.provider", file);
         } else {
             return Uri.fromFile(file);
         }
