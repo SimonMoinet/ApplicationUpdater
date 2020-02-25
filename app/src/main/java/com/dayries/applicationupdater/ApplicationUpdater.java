@@ -97,7 +97,6 @@ public class ApplicationUpdater {
                         // TODO handle the response
                         try {
                             if (response!=null) {
-
                                 File sdcard = context.getExternalFilesDir(Environment.DIRECTORY_DOWNLOADS);
                                 File file = new File(sdcard, "entrepot.apk");
 
