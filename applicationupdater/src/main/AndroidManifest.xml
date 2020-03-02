@@ -14,7 +14,7 @@
         android:theme="@style/AppTheme">
         <provider
             android:name="androidx.core.content.FileProvider"
-            android:authorities="${applicationId}.fileprovider"
+            android:authorities="com.dayries.applicationupdater.FileProvider"
             android:exported="false"
             android:grantUriPermissions="true">
             <meta-data
